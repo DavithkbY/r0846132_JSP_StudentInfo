@@ -33,22 +33,17 @@
     </thead>
     <tbody>
     <%
-        ArrayList<String>lijst = new ArrayList<>();
-        lijst.add("een");
-        lijst.add("twee");
-
         for (Student student: students) {
-    %>
-    <tr>
-        <td><%=student.getNaam() %></td>
-        <td><%=student.getVoornaam() %></td>
-        <td><%=student.getLeeftijd() %></td>
-        <td><%=student.getStudierichting() %></td>
-    </tr>
-
-    <%
-        }
-    %>
+        %>
+        <tr>
+            <td><%=student.getNaam() %></td>
+            <td><%=student.getVoornaam() %></td>
+            <td><%=student.getLeeftijd() %></td>
+            <td><%=student.getStudierichting() %></td>
+        </tr>
+        <%
+            }
+        %>
     </tbody>
 </table>
 
