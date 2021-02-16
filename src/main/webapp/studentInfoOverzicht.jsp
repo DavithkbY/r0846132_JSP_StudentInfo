@@ -1,16 +1,8 @@
 <%@ page import="domain.model.Student" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="domain.db.StudentDB" %>
 <%
-    Student greetje = new Student("Jongen", "Greetje", "Toegepaste Informatica", 23);
-    Student kristien = new Student("Melaerts", "Kristien", "Chemie", 21);
-    Student elke = new Student("Steegmans", "Elke", "Vroedkunde", 16);
-    Student jan = new Student("Van Hee", "Jan", "Verpleegkunde", 18);
-
-    ArrayList<Student> students = new ArrayList<Student>();
-    students.add(greetje);
-    students.add(kristien);
-    students.add(elke);
-    students.add(jan);
+    StudentDB database = new StudentDB();
 
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -33,7 +25,7 @@
     </thead>
     <tbody>
     <%
-        for (Student student: students) {
+        for (Student student: database.students) {
         %>
         <tr>
             <td><%=student.getNaam() %></td>
